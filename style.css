@@ -28,7 +28,6 @@ header img{
 
 ul{
     text-align: right;
-    position: relative;
 }
 
 ul li{
@@ -48,7 +47,7 @@ ul li a{
     background: coral;
 }
 
-a:before{
+nav a:before{
     content: "";
     position: absolute;
     width: 0%;
@@ -72,6 +71,41 @@ h1{
     text-transform: uppercase;
     margin: 25px;
 }
+
+img.navig{
+    display: block;
+    margin: 80px auto;
+    width: 300px;
+    height: 175px;
+    filter: blur(3px);
+    position: relative;
+    border: black 1px solid;
+    cursor: pointer;
+}
+
+.reg{
+    display: block;
+    max-width: 300px;
+    max-height: 190px;
+    margin: auto;
+    text-align: center;
+    font-size: 50px;
+}
+
+.reg p{
+    transform: translateY(-200px);
+    font-weight: bold;
+}
+
+.reg a{
+    text-decoration: none;
+    color: black;
+}
+
+.reg:hover {
+    transform:scale(1.125);
+    transition: 0.35s;
+  }
 
 div.pokedex{
     display: flex;
