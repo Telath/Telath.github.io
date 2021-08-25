@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    overflow-x:hidden;
+}
+
+@media screen and (max-width: 450px) {
+
+    .navbar{
+        width: 100%;
+        background-color: rgb(68, 68, 68);
+        position: fixed ;
+        bottom: 0;  
+    }
+    
+    .navbar ul{
+        list-style: none;
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center; 
+    }
+    
+    .navbar a{
+        display: block;
+        font-size: 0;
+    }
+    
+    .navbar img{
+        filter: brightness(0);
+        transition: 0.5s;
+        width: 60px;
+        height: 60px;    
+    }
+    
+    .home img{
+        width: 40px;
+        height: 40px;
+    }
+    
+    .home a{
+        padding: 10px ;
+    }
+
+    .navbar img:hover{
+        width: 100%;
+        filter: brightness(1);
+    }
+    }
+
+@media screen and (min-width: 450px) and (max-width: 768px) {
+
+.navbar{
+    width: 100%;
+    background-color: rgb(68, 68, 68);
+    position: fixed ;
+    bottom: 0;  
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center; 
+}
+
+.navbar a{
+    display: block;
+    padding: 5px 30px;
+    font-size: 0;
+}
+
+.navbar img{
+    filter: brightness(0);
+    transition: 0.5s;
+    width: 60px;
+    height: 60px;    
+}
+
+.home img{
+    width: 40px;
+    height: 40px;
+}
+
+.home a{
+    padding: 15px 40px ;
+}
+
+.navbar img:hover{
+    width: 100%;
+    filter: brightness(1);
+}
+}
+
+@media screen and (min-width: 768px) {
+    .navbar{
+/*         width: 4rem; */
+        height: 100vh;
+        background-color: rgb(68, 68, 68);
+        position: fixed ;
+        left: 0;
+        bottom: 0;
+        top: 0;   
+    }
+    
+    .navbar ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 0;
+    }
+
+    .navbar img{
+        filter: brightness(0);
+        transition: 0.5s;
+        width: 60px;
+        height: 60px;
+        padding: 30px 5px;
+    }
+     
+    .navbar img:hover{
+        filter: brightness(1);
+    }
+
+    .home img{
+        width: 40px;
+        height: 40px;
+        padding: 20px 15px;
+    }
+
+    li:last-child{
+        margin-top: auto;
+    }
+    
+    main{
+        margin-left: 80px;
+    }
+}
