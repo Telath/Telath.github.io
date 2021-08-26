@@ -124,8 +124,8 @@
         padding: 30px 5px;
     }
      
-    .navbar img:hover{
-        filter: brightness(1);
+    .home img:hover{
+        filter: invert(1);
     }
 
     .home img{
