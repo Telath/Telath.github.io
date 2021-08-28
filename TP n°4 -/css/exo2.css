@@ -85,29 +85,29 @@ main .imageFlottanteGauche{
 
 @media screen and (min-width:1024px){
     
-    nav{
+    header nav{
         display: flex;
         vertical-align: center;
     }
     
-    nav p{
+    header nav p{
         margin-left: 0;
         margin-bottom: 0;
     }
     
-    .logo{
+    header nav .logo{
         flex: 1;
     }
     
-    nav ul{
+    header nav ul{
         display: flex;
     }
     
-    nav a{
+    header nav a{
         margin: 0 30px;
     }
     
-    nav li a:last-of-type{
+    header nav li a:last-of-type{
         padding-right: 0;
     }
 
