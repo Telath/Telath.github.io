@@ -1,0 +1,517 @@
+
+/* HK Grotesk */
+@font-face {
+    font-family: "HK_Grotesk Bold";
+    src: url("../font/HK_Grotesk/HKGrotesk-Bold.otf");
+ }
+ @font-face {
+    font-family: "HK_Grotesk ExtraBold";
+    src: url("../font/HK_Grotesk/HKGrotesk-ExtraBold.otf");
+ }
+ @font-face {
+    font-family: "HK_Grotesk SemiBold";
+    src: url("../font/HK_Grotesk/HKGrotesk-SemiBold.otf");
+ }
+ @font-face {
+    font-family: "HK_Grotesk Regular";
+    src: url("../font/HK_Grotesk/HKGrotesk-Regular.otf");
+ }
+ 
+ /* SF Ui */
+ @font-face {
+    font-family: "SF Ui Bold";
+    src: url("../font/SFUIText/SFUIText-Bold.woff");
+ }
+ @font-face {
+    font-family: "SF Ui Regular";
+    src: url("../font/SFUIText/SFUIText-Regular.woff");
+ }
+ @font-face {
+    font-family: "SF Ui SemiBold";
+    src: url("../font/SFUIText/SFUIText-Semibold.woff");
+ }
+
+ /* TABLE DES STYLES    */
+ /* ---             --- */
+ /* --- HEADER      --- */
+ /* --- MAIN        --- */
+ /* --- SECTION1    --- */
+ /* --- ARTICLES    --- */
+ /* --- SECTION2    --- */
+ /* --- ARTICLES    --- */
+ /* --- FOOTER      --- */
+ /* --- MQ @1100p   --- */
+ /* --- MQ @920px   --- */
+ /* --- MQ @850px   --- */
+ /* --- MQ @650px   --- */
+ /* --- MQ @400px   --- */
+ /* --- MQ @280px   --- */
+ /* ------------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body{
+    background-color: #F9F9FD;
+}
+
+/* --- HEADER --- */
+header{
+    background-color: #151B2B;
+    height: 100vh;
+}
+.first-page{
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header .logo{
+    padding-top: 3.3rem;
+    margin-bottom: 7.88rem;
+}
+
+header .logo img:first-of-type{
+    width: 50px;
+    margin: 0 1rem 0 0;
+}
+
+header .logo img:last-of-type{
+    width: 100px;
+    height: 2rem;
+}
+
+header .intro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+}
+
+header .introText{
+    display: flex;
+    max-width: 500px;
+    flex-direction: column;
+}
+
+header .title{
+    display: flex;
+    align-items:baseline;
+    margin-bottom: 1.5rem;
+}
+
+header .title h2{
+    font-family: "HK_Grotesk ExtraBold";
+    font-size: 2.88rem;
+    color: #FFF;
+    margin: 0 2rem 0 0;
+}
+
+header .title img{
+    height: 28px;
+}
+
+header .introText > p:first-of-type{
+    font-family: "HK_Grotesk SemiBold";
+    font-size: 1.56rem;
+    color: #FFF;
+    line-height: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+header .introText > p:nth-of-type(2){
+    font-family: "SF Ui Regular";
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #8686B2;
+    margin-bottom: 3rem;
+}
+
+header .socials{
+    display: flex;
+}
+
+header .github a, header .discord a, main .github a, main .discord a{
+    display: block;
+    text-decoration: none;
+    font-family: "SF Ui Regular";
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #FFF;
+    padding: 0.56rem 1rem 0.56rem 1rem;
+    background-color: #454658;
+    border-radius: 0.2rem;
+    margin-right: 1.5rem;
+    transition: .4s;
+    line-height: 1.5rem;
+}
+
+header .discord a, main .discord a{
+    background-color: #6578C0;
+}
+
+header .discord a:hover, header .github a:hover, main .discord a:hover, main .github a:hover{
+    transform: scale(1.1);
+}
+
+header .github i, header .discord i, main .github i, main .discord i{
+    margin-right: 0.44rem;
+    font-size: 1.19rem;
+    transform: translateY(1.5px);
+}
+
+/* --- MAIN --- */
+main{
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* --- SECTION 1 --- */
+/* --- ARTICLES --- */
+
+main .article1, main .article2{
+    text-align: center;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+main .article2{
+    position: relative;
+}
+
+main .article2 code{
+    text-align: start;
+    font-size: .9rem;
+
+}
+
+main .article1 h2, main .article2 h2{
+    font-family: "HK_Grotesk ExtraBold";
+    font-weight: 800;
+    font-size: 2rem;
+    color: #454658;
+    margin:6rem 0 1.5rem 0;
+}
+
+main .article1 p, main .article2 p{
+    font-family: "SF Ui Regular";
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #454658;
+    margin-bottom: 2rem;
+}
+
+main .article2 h2{
+    margin: 8rem 0 1.5rem 0;
+}
+
+main .article2 p:first-of-type{
+    margin-bottom: 6.56rem;
+}
+
+main .article2 .socials p{
+    margin-bottom: 0;
+}
+
+main .article1 img, main .article2 img{
+    width: 100%;
+}
+
+main .article2 img:first-of-type{
+    position: absolute;
+    top: -3rem;
+    left: 0;
+    z-index: -1;
+}
+
+main .socials{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* --- SECTION 2 --- */
+/* --- ARTICLES --- */
+
+main .first-2, main .last-2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6rem;
+}
+
+main .first-2 article, main .last-2 article{
+    width: 430px;
+}
+
+main .first-2 h3, main .last-2 h3{
+    font-family: "HK_Grotesk Bold";
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #454658;
+}
+
+main .first-2 p, main .last-2 p{
+    font-family: "SF Ui Regular";
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #454658;
+}
+
+main .first-2 p:first-of-type, main .last-2 p:first-of-type{
+    margin-bottom: 1.5rem;
+}
+
+main .first-2 p:nth-of-type(2), main .last-2 p:nth-of-type(2){
+    margin-bottom: 1rem;
+}
+
+main .first-2 a, main .last-2 a{
+    text-transform: uppercase;
+    font-family: "SF Ui Bold";
+    color: #5D64D2;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-decoration: none;
+}
+
+main .first-2 a:hover, main .last-2 a:hover{
+    text-decoration: underline;
+}
+
+main section .last-title{
+    color: #454658;
+    font-family: "HK_Grotesk Bold";
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 10.43rem 0 16.63rem 0;
+}
+
+/* --- FOOTER --- */
+footer{
+    background-color: #FFFFFF;
+    padding: 0 1rem;
+}
+
+footer .logo-text{
+    display: flex;
+    align-items: center;
+    padding: 3rem 0;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+footer .logo-text img{
+    width: 2.5rem;
+    margin-right: 0.75rem;
+}
+
+footer .logo-text p{
+    font-family: "SF Ui Regular";
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+footer .last-page{
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: "SF Ui Regular";
+    font-size: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+}
+
+footer .first-category{
+    display: flex;
+    flex-direction: column;
+    max-width: 310px;
+    color: #798099;
+}
+
+footer .first-category p, footer .first-category a{
+    margin-bottom: 1.5rem;
+    color: #798099;
+}
+
+footer .logos-small{
+    display: flex;
+}
+
+footer .logos-small a{
+    border: solid 1px #e6e8f0;
+    padding: 0.375rem;
+    margin: 0.19rem;
+    border-radius: 0.31rem;
+    transition: .4s;
+}
+
+footer .logos-small a:hover{
+    color: #151B2B;
+    border: solid 1px #151B2B;
+}
+
+footer .logos-small a:first-of-type{
+    margin-left: 0;
+}
+
+footer .category p, footer .category a{
+    margin: 1.5rem 0;
+    color: #798099;
+    text-decoration: none;
+}
+
+footer .category a:hover{
+    color: #151B2B;
+    text-decoration: underline;
+}
+
+footer hr{
+    width: 95%;
+    margin: 0 auto;
+    
+}
+
+footer .bas-de-page p{
+    color: #798099;
+    font-family: "SF Ui Regular";
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 1.75rem 1rem;
+}
+
+footer .bas-de-page a{
+    text-decoration: none;
+    color: #4548b0;
+    font-size: 0.75rem;
+}
+
+footer .bas-de-page a:hover{
+    text-decoration: underline;
+}
+
+/* --- MQ @1100p   --- */
+@media screen and (max-width: 1100px){
+    header .intro{
+        display: unset;
+    }
+    header .introText{
+        margin: 0 auto;
+        position: relative;
+    }
+    header .intro img{
+        position: absolute;
+        opacity: 20%;
+        top: 8rem;
+        margin-left: 50vw;
+        transform: translateX(-50%);
+    }
+}
+
+ /* --- MQ @920px   --- */
+@media screen and (max-width: 920px){
+    main .first-2 article, main .last-2 article{
+        max-width: 300px;
+    }
+    main .last-2 article img, main .first-2 article img{
+        width: 100%;
+    }
+    main .last-2 article:nth-of-type(2) img, main .first-2 article:nth-of-type(2) img{
+        margin-bottom: 7rem;
+    }
+
+}
+
+ /* --- MQ @850px   --- */
+@media screen and (max-width: 850px){
+    header .intro img{
+        display: none;
+    }
+    main .article2 img:first-of-type {
+        display: none;
+    }
+    footer .last-page {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer .last-page .first-category{
+        margin: 0 auto;
+    }
+
+    footer .logos-small{
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+}
+
+ /* --- MQ @650px   --- */
+@media screen and (max-width: 650px){
+    header .intro .title{
+        flex-direction: column;
+    }
+    header .intro img{
+        /* width: 300px; */
+        top: 15rem;
+    }
+    main .section2 article{
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+    main .first-2, main .last-2{
+        flex-direction: column;
+    }
+    main .last-2{
+        margin-top: 0;
+    }
+    main .first-2 article, main .last-2 article{
+        max-width: unset;
+        width: unset;
+    }
+    main .last-2 article:nth-of-type(2) img, main .first-2 article:nth-of-type(2) img{
+        margin-bottom: unset;
+    }
+}
+
+ /* --- MQ @400px   --- */
+@media screen and (max-width: 400px){
+    header .intro img{
+        display: none;
+    }
+    .socials{
+        flex-direction: column;
+    }
+    .socials .github a{
+        display: unset;
+        margin-right: 0;
+    }
+    .socials .github p{
+        margin-bottom: 2rem;
+    }
+    main .socials .github p{
+        margin-bottom: 2rem;
+    }
+
+    .socials .discord a{
+        display: unset;
+        margin-bottom: 2rem;
+    }
+}
+
+ /* --- MQ @280px   --- */
+@media screen and (max-width: 280px){
+    header .logo{
+        padding-top: 3.3rem;
+        margin-bottom: 3rem;
+    }
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ENCODAGE -->
+    <meta charset="UTF-8">
+
+    <!-- COMPATIBLITÉ IE et Edge -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- LARGEUR 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- DESCRIPTION -->
+    <meta name="description" content="Qovery Engine">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="src/logo-qovery.png" type="image/png">
+
+    <!-- FICHIER CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- TITRE DE L'ONGLET -->
+    <title>Qovery Engine</title>
+
+    <script src="https://kit.fontawesome.com/e7a9a18bee.js" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js" integrity="sha512-MinqHeqca99q5bWxFNQEQpplMBFiUNrEwuuDj2rCSh1DgeeTXUgvgYIHZ1puBS9IKBkdfLMSk/ZWVDasa3Y/2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/vs.min.css" integrity="sha512-AVoZ71dJLtHRlsgWwujPT1hk2zxtFWsPlpTPCc/1g0WgpbmlzkqlDFduAvnOV4JJWKUquPc1ZyMc5eq4fRnKOQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <header>
+        <div class="first-page">
+            <div class="logo">
+                <img src="src/logo-qovery.png" alt="Logo Qovery">
+                <img src="src/QoveryText.png" alt="Texte Qovery">
+            </div>
+            <div class="intro">
+                <div class="introText">
+                    <div class="title">
+                        <h2>Qovery Engine</h2>
+                        <!-- A CHANGER -->
+                        <iframe src="https://ghbtns.com/github-btn.html?user=qovery&amp;repo=engine&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="150" height="20" title="Qovery Engine Github"></iframe>
+                    </div>
+                    <p>
+                        Abstraction layer to deploy microservices applications on any Cloud provider.
+                    </p>
+                    <p>
+                        Qovery Engine is an open-source abstraction layer product that turns easy apps deployment on
+                        AWS,
+                        GCP,
+                        Azure and others Cloud providers.
+                    </p>
+                    <div class="socials">
+                        <div class="github">
+                            <p>
+                                <a href="#" title="Redirection vers github" target="_blank"><i class="fab fa-github"></i>See on Github</a>
+                            </p>
+                        </div>
+                        <div class="discord">
+                            <p>
+                                <a href="#" title="Redirection vers discord" target="_blank"><i class="fab fa-discord"></i>Join us on Discord</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <img src="src/Qovery.png" alt="Image Qovery">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Besoin d'un titre avec <section>.. à remplacer par une div? -->
+        <section class="section1">
+            <article class="article1">
+                <h2>How does it work?</h2>
+                <p>
+                    Qovery Engine is an open-source abstraction layer product that turns easy apps deployment on AWS,
+                    GCP,
+                    Azure and others Cloud providers. The Qovery Engine is coded in Rust and takes advantage of
+                    Terraform,
+                    Helm, Kubectl, Docker to manage resources.
+                </p>
+                <img src="src/hdiw.png" alt="Image How does it work">
+            </article>
+            <article class="article2">
+                <h2>Usage</h2>
+                <p>
+                    Initialize EKS (AWS Kubernetes) and ECR (AWS container registry) on AWS
+                </p>
+                <img src="src/divtop.png" alt="Image background">
+                <pre><code class="rust">let engine = Engine::new(
+    context, // parameters
+    local_docker, // initialize Docker as a Build Platform
+    ecr, // initialize Elastic Container Registry
+    aws, // initialize AWS account
+    cloudflare, // initialize Cloudflare as DNS Nameservers
+);
+
+let session = match engine.session() {
+    Ok(session) => session, // get the session
+    Err(config_error) => panic!("configuration error {:?}", config_error),
+};
+
+let mut tx = session.transaction();
+
+// create EKS (AWS managed Kubernetes cluster)
+tx.create_kubernetes(&eks);
+
+// create the infrastructure and wait for the result
+match tx.commit() { 
+    TransactionResult::Ok => println!("OK"),
+    TransactionResult::Rollback(commit_err) => println!("ERROR but rollback OK"), 
+    TransactionResult::UnrecoverableError(commit_err, rollback_err) => println!("FATAL ERROR")
+};
+                </code></pre>
+                <div class="socials">
+                    <div class="github">
+                        <p>
+                            <a href="" title="" target="_blank"><i class="fab fa-github"></i>See on Github</a>
+                        </p>
+                    </div>
+                    <div class="discord">
+                        <p>
+                            <a href="" title="" target="_blank"><i class="fab fa-discord"></i>Join us on Discord</a>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Besoin d'un titre avec <section>.. à remplacer par une div? -->
+        <section class="section2">
+            <div class="first-2">
+                <article>
+                    <img src="src/realworld.png" alt="Image article realword">
+                    <h3>Deploy real world applications</h3>
+                    <p>
+                        Qovery Engine empowers you to deploy complex applications, such as a backend, a frontend, and a
+                        database in a very simple way.
+                    </p>
+                    <p>
+                        Servers, networking, security, all is done by the Engine for you.
+                    </p>
+                    <p><a href="" title ="Redirection vers 'see more'" target="_blank">See more</a></p>
+                </article>
+                <article>
+                    <img src="src/resiliency.png" alt="Image article resiliency">
+                    <h3>Resiliency is key</h3>
+                    <p>
+                        Qovery Engine knows when something goes wrong on the deployment of your applications. Qovery
+                        Engine
+                        is built with resiliency in mind.
+                    </p>
+                    <p>
+                        A transactional engine inspired by what is provided into ACID databases has been developed at
+                        the
+                        heart of the product to rollback on a consistent and working application version when something
+                        goes
+                        wrong.
+                    </p>
+                    <p><a href="" title ="Redirection vers 'see more'" target="_blank">See more</a></p>
+                </article>
+            </div>
+
+            <div class="last-2">
+                <article>
+                    <img src="src/best-tools.png" alt="Image article best tools">
+                    <h3>On top of the best tools</h3>
+                    <p>
+                        Qovery Engine does not reinvent the wheel. It takes advantage of the best tools in the Cloud
+                        industry, such as Kubernetes, Terraform, and Helm to manage the deployment of the infrastructure
+                        and
+                        your applications.
+                    </p>
+                    <p>
+                        Servers, networking, security, all is done by the Engine for you.
+                    </p>
+                    <p><a href="" title ="Redirection vers 'see more'" target="_blank">See more</a></p>
+                </article>
+                <article>
+                    <img src="src/extensible.png" alt="Image article extensible">
+                    <h3>Extensible</h3>
+                    <p>
+                        Qovery Engine is built to be highly extensible. Adding the support of a Cloud provider or a
+                        Continuous Integration platform is as simple as implementing a simple programmatic interface.
+                    </p>
+                    <p><a href="" title ="Redirection vers 'see more'" target="_blank">See more</a></p>
+                </article>
+            </div>
+            <p class="last-title">They use Qovery Engine</p>
+        </section>
+    </main>
+
+    <footer>
+
+        <div class="logo-text">
+            <img src="src/logo2-qovery.svg" alt="Logo 2 Qovery">
+            <p>Qovery</p>
+        </div>
+        <div class="last-page">
+            <div class="first-category">
+                <p>
+                    Qovery combines the power of Kubernetes, the reliability of AWS, and the simplicity of Heroku to
+                    deploy your apps.
+                </p>
+                <div class="logos-small">
+                    <a href="" title="Redirection vers github" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="" title="Redirection vers linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="" title="Redirection vers twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="" title="Redirection vers discord" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="category">
+                <h4>Ressources</h4>
+                <p><a href="" title="Redirection vers 'Documentation'" target="_blank">Documentation</a></p>
+                <p><a href="" title="Redirection vers 'Guides'" target="_blank">Guides</a></p>
+                <p><a href="" title="Redirection vers 'Tutorials'" target="_blank">Tutorials</a></p>
+                <p><a href="" title="Redirection vers 'Engineering'" target="_blank">Engineering</a></p>
+                <p><a href="" title="Redirection vers 'Pricing'" target="_blank">Pricing</a></p>
+                <p><a href="" title="Redirection vers 'API'" target="_blank">API</a></p>
+                <p><a href="" title="Redirection vers 'Github'" target="_blank">Github</a></p>   
+            </div>
+            <div class="category">
+                <h4>Community</h4>
+                <p><a href="" title="Redirection vers 'Discord'" target="_blank">Discord</a></p>
+                <p><a href="" title="Redirection vers 'Forum'" target="_blank">Forum</a></p>
+                <p><a href="" title="Redirection vers 'Community Call'" target="_blank">Community Call</a></p>
+                <p><a href="" title="Redirection vers 'Goodies'" target="_blank">Goodies</a></p>
+                <p><a href="" title="Redirection vers 'Roadmap'" target="_blank">Roadmap</a></p>
+            </div>
+            <div class="category">
+                <h4>Qovery vs. Other</h4>
+                <p><a href="" title="Redirection vers 'Heroku'" target="_blank">Heroku</a></p>
+                <p><a href="" title="Redirection vers 'Netlify'" target="_blank">Netlify</a></p>
+                <p><a href="" title="Redirection vers 'Terraform Call'" target="_blank">Terraform Call</a></p>
+            </div>
+            <div class="category">
+                <h4>Company</h4>
+                <p><a href="" title="Redirection vers 'Blog'" target="_blank">Blog</a></p>
+                <p><a href="" title="Redirection vers 'Jobs'" target="_blank">Jobs</a></p>
+                <p><a href="" title="Redirection vers 'Team'" target="_blank">Team</a></p>
+                <p><a href="" title="Redirection vers 'Investors'" target="_blank">Investors</a></p>
+                <p><a href="" title="Redirection vers 'Terms'" target="_blank">Terms</a></p>
+                <p><a href="" title="Redirection vers 'Contact'" target="_blank">Contact</a></p>
+            </div>
+            
+            
+            
+        </div>
+        <hr>
+        <div class="bas-de-page">
+            <p>© 2021 DESIGNED BY QOVERY |
+                BACKED BY <a href="" title="Redirection vers 'Techstars'" target="_blank">TECHSTARS</a> |
+                PROUD SILVER MEMBER OF <a href="" title="Redirection vers'CNCF'" target="_blank">CNCF</a> AND <a href="" title="Redirection vers'Linux Foundation'" target="_blank">LINUX FOUNDATION</a> |
+                QOVERY BY BIRDSIGHT - ALL RIGHTS RESERVED</p>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
