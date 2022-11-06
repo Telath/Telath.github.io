@@ -29,8 +29,8 @@ h1::before{
     width: 200px;
     background-color: white;
     bottom: -30px;
-    left: 25vw;
-    transform: translateX(-75%);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 h2{
@@ -62,8 +62,10 @@ h2{
 
 .navbar ul{
     display: flex;
+    gap: 2rem;
     justify-content: space-evenly;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 .navbar a{
